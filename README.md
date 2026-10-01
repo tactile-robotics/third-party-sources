@@ -12,12 +12,14 @@ committed to the repository.
 
 | Release | Product | Components |
 |---|---|---|
-| `denteach-ffmpeg-n5.1.2` | DenTeach Instructor, DenTeach Student | FFmpeg n5.1.2 (`ffmpeg.exe`, `ffplay.exe`, `ffprobe.exe` and the `av*`/`sw*` DLLs) and every library linked into those binaries; OpenCV's FFmpeg wrapper (`opencv_videoio_ffmpeg4110_64.dll`) |
+| `denteach-ffmpeg-n5.1.2` | DenTeach Instructor, DenTeach Student | FFmpeg n5.1.2 (`ffmpeg.exe`, `ffplay.exe`, `ffprobe.exe` and the `av*`/`sw*` DLLs) and the copyleft-licensed libraries linked into them; OpenCV's FFmpeg wrapper (`opencv_videoio_ffmpeg4110_64.dll`) |
 
-## What each archive contains
+## What each release contains
 
-- **Upstream source** for every component, at the exact tag, commit or revision used
-  to build the shipped binaries.
+- **Upstream source** for each copyleft-licensed component (LGPL, MPL-2.0), at the exact
+  tag, commit or revision used to build the shipped binaries. Permissively licensed
+  libraries linked into the same binaries are not archived here; their upstream
+  repositories and commits are pinned in the build scripts.
 - **Build scripts** that produced the binaries, including any patches they apply.
 - A **`MANIFEST.md`** listing each component, its origin URL, the pinned revision, its
   licence, and the SHA-256 of each archived file.
